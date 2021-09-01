@@ -1,0 +1,32 @@
+{
+    "name": "lidyapos/theme",
+    "description": "Theme package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "LidyaPos\\Theme\\": "src"
+        }
+    },
+    "require": {
+        "lidyapos/platform": "*@dev",
+        "lidyapos/sitemap": "*@dev",
+        "lidyapos/widget": "*@dev",
+        "lidyapos/slug": "*@dev",
+        "lidyapos/seo-helper": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LidyaPos\\Theme\\Providers\\ThemeServiceProvider",
+                "LidyaPos\\Theme\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Theme": "LidyaPos\\Theme\\Facades\\ThemeFacade",
+                "ThemeOption": "LidyaPos\\Theme\\Facades\\ThemeOptionFacade",
+                "ThemeManager": "LidyaPos\\Theme\\Facades\\ManagerFacade",
+                "AdminBar": "LidyaPos\\Theme\\Facades\\AdminBarFacade",
+                "SiteMapManager": "LidyaPos\\Theme\\Facades\\SiteMapManagerFacade"
+            }
+        }
+    }
+}
